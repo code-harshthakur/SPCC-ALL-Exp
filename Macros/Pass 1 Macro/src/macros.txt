@@ -1,0 +1,7 @@
+#define MULTIPLY(x, y)  ((x) * (y))
+#define ADD_AND_MULTIPLY(x, y) (MULTIPLY((x) + (y), 2))
+
+let num1 = 3;
+let num2 = 5;
+
+let result = ADD_AND_MULTIPLY(num1, num2); 
