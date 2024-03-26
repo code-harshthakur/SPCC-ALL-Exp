@@ -1,0 +1,11 @@
+{
+	"devDependencies": {
+		"typescript": "^5.4.2",
+		"@types/node": "^20.11.26",
+		"prettier": "^3.2.5"
+	},
+	"scripts": {
+		"start": "tsc && node ./dist/index.js",
+		"format": "prettier --write \"**/*.ts\""
+	}
+}
