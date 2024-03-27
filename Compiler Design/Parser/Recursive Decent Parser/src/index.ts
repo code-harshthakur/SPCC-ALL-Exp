@@ -16,14 +16,13 @@ eof: End of file
 */
 
 import * as readline from "readline";
-import { tokenizer } from "../../../Tokenizer/src/index";
-
+import { tokenizer } from "./helper/tokeniser";
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 // Defination of token : A tuple of the token's value and its type number
-type token = [string, number];
+type Token = [string, number];
 
 class PARSER {
   private tokens: Token[];
@@ -138,3 +137,10 @@ class PARSER {
     return false;
   }
 }
+
+// Example Test
+const input = " x = 3 + 4 * 2"; // Space as delimeter
+const tokens: [string, number][] = tokenizer(input);
+const parser = new PARSER(tokens);
+const isValid = parser.parse(); // Start Parsing
+console.log(isValid ? "Valid Syntax" : "Invalid syntax");
