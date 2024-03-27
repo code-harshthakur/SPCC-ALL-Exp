@@ -1,4 +1,4 @@
-function tokenizer(input: string): Array<[string, number]> {
+ export function tokenizer(input: string): Array<[string, number]> {
   // Define operators & Delimenter
   const operators: string[] = ["+", "-", "*", "/", "^", "(", ")"];
   const delimeter: string = " ";
